@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         else
             recyclerView.setLayoutManager(new GridLayoutManager(getApplicationContext(),2));
         recyclerView.setAdapter(new CustomAdapter(getApplicationContext(), myApp));
+        //
         DividerItemDecoration decoration = new DividerItemDecoration(getApplicationContext(),DividerItemDecoration.VERTICAL);
         recyclerView.addItemDecoration(decoration);
 
