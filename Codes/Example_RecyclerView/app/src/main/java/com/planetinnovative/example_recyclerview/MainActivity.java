@@ -19,6 +19,16 @@ public class MainActivity extends AppCompatActivity {
         myApp.add(new MyApplication(R.drawable.im1, "Youtube"));
         myApp.add(new MyApplication(R.drawable.im2, "Facebook"));
         myApp.add(new MyApplication(R.drawable.im3, "Instagram"));
+        myApp.add(new MyApplication(R.drawable.im1, "Instagram"));
+        myApp.add(new MyApplication(R.drawable.im2, "Instagram"));
+        myApp.add(new MyApplication(R.drawable.im3, "Instagram"));
+        myApp.add(new MyApplication(R.drawable.im1, "Instagram"));
+        myApp.add(new MyApplication(R.drawable.im3, "Instagram"));
+        myApp.add(new MyApplication(R.drawable.im2, "Instagram"));
+        myApp.add(new MyApplication(R.drawable.im1, "Instagram"));
+        myApp.add(new MyApplication(R.drawable.im2, "Instagram"));
+        myApp.add(new MyApplication(R.drawable.im3, "Instagram"));
+        myApp.add(new MyApplication(R.drawable.im2, "Instagram"));
         //
 
 
