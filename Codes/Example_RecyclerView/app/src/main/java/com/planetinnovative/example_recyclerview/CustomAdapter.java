@@ -6,55 +6,36 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
-
-import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
-public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomViewHolder> {
+public class CustomAdapter extends RecyclerView.Adapter<CustomViewHolder> {
 
-    ArrayList<MyApplication> myApp;
+    ArrayList<YoutubeData> data;
     LayoutInflater inflater;
 
-
-    public CustomAdapter(Context context, ArrayList<MyApplication> myApp) {
-        this.myApp = myApp;
-        inflater = inflater.from(context);
+    public CustomAdapter(Context ctx, ArrayList<YoutubeData> data) {
+        this.data = data;
+        inflater = LayoutInflater.from(ctx);
     }
-
 
     @NonNull
     @Override
-    public CustomAdapter.CustomViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = inflater.inflate(R.layout.single_design, parent, false);
+    public CustomViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = inflater.inflate(R.layout.custom_view, parent, false);
         CustomViewHolder holder = new CustomViewHolder(view);
         return holder;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull CustomAdapter.CustomViewHolder holder, int position) {
-        holder.textView.setText(myApp.get(position).getAppTitle());
-        holder.imageView.setImageResource(myApp.get(position).getAppImage());
+    public void onBindViewHolder(@NonNull CustomViewHolder holder, int position) {
+        holder.tvTitle.setText( data.get(position).getTitle());
+        holder.ivMain.setImageResource( data.get(position).getMainImage());
+        holder.ivFavicon.setImageResource( data.get(position).getFavImage());
     }
 
     @Override
     public int getItemCount() {
-        return myApp.size();
-    }
-
-
-    class CustomViewHolder extends RecyclerView.ViewHolder {
-
-        ImageView imageView;
-        TextView textView;
-
-        public CustomViewHolder(View itemView) {
-            super(itemView);
-            imageView = itemView.findViewById(R.id.ivMainImage);
-            textView = itemView.findViewById(R.id.ivMainText);
-        }
+        return data.size();
     }
 }
-
