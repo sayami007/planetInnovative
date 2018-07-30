@@ -8,15 +8,17 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class CustomAdapter extends RecyclerView.Adapter<CustomViewHolder> {
 
-    ArrayList<YoutubeData> data;
+
+    ArrayList<YoutubeData> youtubeData;
     LayoutInflater inflater;
 
-    public CustomAdapter(Context ctx, ArrayList<YoutubeData> data) {
-        this.data = data;
-        inflater = LayoutInflater.from(ctx);
+    CustomAdapter(Context context, ArrayList<YoutubeData> youtubeData) {
+        this.youtubeData = youtubeData;
+        inflater = LayoutInflater.from(context);
     }
 
     @NonNull
@@ -29,13 +31,13 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull CustomViewHolder holder, int position) {
-        holder.tvTitle.setText( data.get(position).getTitle());
-        holder.ivMain.setImageResource( data.get(position).getMainImage());
-        holder.ivFavicon.setImageResource( data.get(position).getFavImage());
+        holder.tvTitle.setText(youtubeData.get(position).getTitle());
+        holder.ivFavicon.setImageResource(youtubeData.get(position).getFavImage());
+        holder.ivMain.setImageResource(youtubeData.get(position).getMainImage());
     }
 
     @Override
     public int getItemCount() {
-        return data.size();
+        return youtubeData.size();
     }
 }

@@ -6,6 +6,7 @@ import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
+import android.widget.LinearLayout;
 
 import java.util.ArrayList;
 
@@ -28,33 +29,13 @@ public class MainActivity extends AppCompatActivity {
         youtubeData.add(new YoutubeData("Twitter Hits Vol1", R.drawable.favicon3, R.drawable.img3));
         youtubeData.add(new YoutubeData("Twitter Hits Vol1", R.drawable.favicon3, R.drawable.img3));
         youtubeData.add(new YoutubeData("Twitter Hits Vol1", R.drawable.favicon3, R.drawable.img3));
-        youtubeData.add(new YoutubeData("Twitter Hits Vol1", R.drawable.favicon3, R.drawable.img3));
-        youtubeData.add(new YoutubeData("Twitter Hits Vol1", R.drawable.favicon3, R.drawable.img3));
-        youtubeData.add(new YoutubeData("Twitter Hits Vol1", R.drawable.favicon3, R.drawable.img3));
-        youtubeData.add(new YoutubeData("Twitter Hits Vol1", R.drawable.favicon3, R.drawable.img3));
-        youtubeData.add(new YoutubeData("Twitter Hits Vol1", R.drawable.favicon3, R.drawable.img3));
-        youtubeData.add(new YoutubeData("Twitter Hits Vol1", R.drawable.favicon3, R.drawable.img3));
-        youtubeData.add(new YoutubeData("Twitter Hits Vol1", R.drawable.favicon3, R.drawable.img3));
-        youtubeData.add(new YoutubeData("Twitter Hits Vol1", R.drawable.favicon3, R.drawable.img3));
-        youtubeData.add(new YoutubeData("Twitter Hits Vol1", R.drawable.favicon3, R.drawable.img3));
-        youtubeData.add(new YoutubeData("Twitter Hits Vol1", R.drawable.favicon3, R.drawable.img3));
-        youtubeData.add(new YoutubeData("Twitter Hits Vol1", R.drawable.favicon3, R.drawable.img3));
-        youtubeData.add(new YoutubeData("Twitter Hits Vol1", R.drawable.favicon3, R.drawable.img3));
-        youtubeData.add(new YoutubeData("Twitter Hits Vol1", R.drawable.favicon3, R.drawable.img3));
-        youtubeData.add(new YoutubeData("Twitter Hits Vol1", R.drawable.favicon3, R.drawable.img3));
-        youtubeData.add(new YoutubeData("Twitter Hits Vol1", R.drawable.favicon3, R.drawable.img3));
-        youtubeData.add(new YoutubeData("Twitter Hits Vol1", R.drawable.favicon3, R.drawable.img3));
-        youtubeData.add(new YoutubeData("Twitter Hits Vol1", R.drawable.favicon3, R.drawable.img3));
-        youtubeData.add(new YoutubeData("Twitter Hits Vol1", R.drawable.favicon3, R.drawable.img3));
-        youtubeData.add(new YoutubeData("Twitter Hits Vol1", R.drawable.favicon3, R.drawable.img3));
-        youtubeData.add(new YoutubeData("Twitter Hits Vol1", R.drawable.favicon3, R.drawable.img3));
-        youtubeData.add(new YoutubeData("Twitter Hits Vol1", R.drawable.favicon3, R.drawable.img3));
 
         //LayoutManager
-        recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
+        recyclerView.setLayoutManager(new GridLayoutManager(getApplicationContext(),2));
         //CustomAdapter
-        recyclerView.setAdapter(new CustomAdapter(getApplicationContext(),youtubeData));
 
+        CustomAdapter adapter = new CustomAdapter(getApplicationContext(), youtubeData);
+        recyclerView.setAdapter(adapter);
 
 
     }
