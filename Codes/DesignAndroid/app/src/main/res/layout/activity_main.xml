@@ -1,0 +1,63 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <EditText
+        android:id="@+id/num1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Principle"
+        android:inputType="number"
+        android:padding="20dp"
+        android:textSize="30sp" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/number"></Spinner>
+
+
+    <RadioGroup
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5%"/>
+
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10%"/>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/sum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="Sum" />
+
+    <TextView
+        android:id="@+id/total"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="12"
+        android:inputType="number"
+        android:padding="20dp"
+        android:textSize="30sp" />
+
+</LinearLayout>
