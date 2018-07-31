@@ -1,6 +1,7 @@
 package com.planetinnovative.frags;
 
 import android.app.FragmentManager;
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.PagerTabStrip;
@@ -15,7 +16,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        TabLayout layout = findViewById(R.id.tab);
         ViewPager pager = findViewById(R.id.viewpager);
         pager.setAdapter(new PageAdapter(getSupportFragmentManager()));
+        layout.setupWithViewPager(pager);
     }
 }
