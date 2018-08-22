@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "163509777572",
+    "firebase_url": "https://pifirebase-3082d.firebaseio.com",
+    "project_id": "pifirebase-3082d",
+    "storage_bucket": "pifirebase-3082d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:163509777572:android:bc053949918cfc01",
+        "android_client_info": {
+          "package_name": "com.planetinnovative.firebaseproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "163509777572-kr8bdaidq19btnloc4j1lbnihlmrtcv7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAo9TDFLNJSU7mgsKOU5qvxKUePuUL1QPo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
