@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">FirebaseProject</string>
     <string name="default_notification_channel_id">1</string>
+
+    <string name="facebook_application_id" translatable="false">326986957875254</string>
+    <string name="facebook_login_protocol_scheme" translatable="false">fb326986957875254</string>
+
 </resources>
